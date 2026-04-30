@@ -1,0 +1,164 @@
+.home {
+  background: radial-gradient(circle at top, rgba(245, 130, 42, 0.12), transparent 40%),
+    var(--bg-base);
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(13, 13, 13, 1) 35%,
+    rgba(13, 13, 13, 0.5) 65%,
+    transparent 100%
+  );
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding: 0 5vw;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.bannerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.overview {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heroBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.heroYear {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.heroActions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border-radius: var(--radius-pill);
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.primaryBtn {
+  background: var(--accent);
+  color: #101010;
+  box-shadow: var(--accent-glow);
+}
+
+.primaryBtn:hover {
+  background: var(--accent-hover);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dots {
+  position: absolute;
+  right: 5vw;
+  bottom: 6vh;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--border-hover);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dotActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: var(--accent-glow);
+}
+
+.error {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .banner {
+    align-items: flex-end;
+    padding-bottom: 6rem;
+  }
+
+  .bannerOverlay {
+    background: linear-gradient(
+      to top,
+      rgba(13, 13, 13, 0.95) 20%,
+      rgba(13, 13, 13, 0.7) 55%,
+      transparent 100%
+    );
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .dots {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

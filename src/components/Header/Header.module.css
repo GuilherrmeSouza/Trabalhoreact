@@ -1,0 +1,117 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 5vw;
+  transition: var(--transition);
+}
+
+.transparent {
+  background: linear-gradient(to bottom, rgba(13, 13, 13, 0.9) 0%, transparent 100%);
+  backdrop-filter: none;
+}
+
+.solid {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--text-primary);
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconBtn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.iconBtn:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--accent-glow);
+}
+
+.searchForm {
+  display: flex;
+}
+
+.searchInput {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem;
+  min-width: 220px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--accent);
+  box-shadow: var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .searchInput {
+    min-width: 160px;
+  }
+}

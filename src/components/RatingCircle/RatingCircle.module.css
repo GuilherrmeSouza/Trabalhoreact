@@ -1,0 +1,16 @@
+.wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.value {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}

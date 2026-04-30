@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-base: #0d0d0d;
+  --bg-surface: #161616;
+  --bg-elevated: #1f1f1f;
+  --bg-overlay: rgba(13, 13, 13, 0.85);
+
+  --accent: #f5822a;
+  --accent-hover: #e06d18;
+  --accent-muted: rgba(245, 130, 42, 0.15);
+  --accent-glow: 0 0 24px rgba(245, 130, 42, 0.35);
+
+  --rating-high: #4ade80;
+  --rating-mid: #facc15;
+  --rating-low: #f87171;
+
+  --text-primary: #f2f2f2;
+  --text-secondary: #999999;
+  --text-muted: #555555;
+
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.25s var(--ease);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}

@@ -1,0 +1,38 @@
+.page {
+  padding: 6.5rem 5vw 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.header {
+  display: grid;
+  gap: 1rem;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.4rem;
+}
+
+.cardSlot {
+  display: grid;
+}
+
+.skeletonCard {
+  aspect-ratio: 2 / 3;
+}
+
+.skeletonText {
+  height: 14px;
+  margin-top: 8px;
+  width: 80%;
+}
+
+.empty {
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--text-secondary);
+}

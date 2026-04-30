@@ -1,0 +1,51 @@
+.section {
+  padding: 2.5rem 5vw;
+  display: grid;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.viewAll {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(160px, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.row > * {
+  scroll-snap-align: start;
+}
+
+.cardSlot {
+  display: grid;
+}
+
+.skeletonCard {
+  aspect-ratio: 2 / 3;
+}
+
+.skeletonText {
+  height: 14px;
+  margin-top: 8px;
+  width: 80%;
+}

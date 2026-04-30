@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.posterWrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  transition: transform 0.3s var(--ease);
+}
+
+.card:hover .poster {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.8rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(13, 13, 13, 0.85) 75%);
+  transform: translateY(45%);
+  transition: transform 0.3s var(--ease);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.card:hover .overlay {
+  transform: translateY(0%);
+}
+
+.rating {
+  font-weight: 600;
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
